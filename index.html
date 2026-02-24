@@ -9,11 +9,12 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body class="bg-gray-100">
+
   <div class="container-principal">
     <header class="header flex justify-between items-center">
       <div>
         <h1 class="text-2xl font-bold text-gray-800">📊 Painel de Scripts</h1>
-        <p class="text-gray-600">Gerencie os scripts de atendimento abaixo.</p>
+        <p class="text-gray-600">Scripts atualizados em tempo real.</p>
       </div>
       <button id="btn-avisos" class="relative p-3 rounded-full bg-indigo-600 text-white hover:bg-indigo-700 shadow-lg transition-all active:scale-95">
         <span class="text-xl">🔔</span>
@@ -21,7 +22,6 @@
     </header>
 
     <section class="secao-tabela mt-6">
-      <h2 class="titulo-secao">📝 Scripts de Atendimento</h2>
       <div class="overflow-x-auto bg-white rounded-lg shadow-md border border-gray-200">
         <table class="tabela-custom">
           <thead>
@@ -40,8 +40,8 @@
     <section class="mt-10 bg-white p-6 rounded-lg shadow-md border-t-4 border-indigo-500">
       <h2 class="text-lg font-bold text-gray-800 mb-1">💡 Sugerir Novo Script</h2>
       <div class="flex flex-col gap-3">
-        <textarea id="input-sugestao" class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none transition resize-none" rows="3" placeholder="Descreva a mudança necessária..."></textarea>
-        <button id="btn-enviar-sugestao" class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition font-bold self-end">Enviar Sugestão</button>
+        <textarea id="input-sugestao" class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none transition resize-none" rows="3" placeholder="Digite sua sugestão aqui..."></textarea>
+        <button id="btn-enviar-sugestao" class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition font-bold self-end shadow-md">Enviar Sugestão</button>
       </div>
     </section>
   </div>
@@ -50,11 +50,11 @@
     <div class="bg-white rounded-xl shadow-2xl w-full max-w-md p-6 mx-4">
       <h3 class="text-xl font-bold text-gray-800 mb-4">🔔 Avisos Importantes</h3>
       <div id="container-avisos" class="max-h-60 overflow-y-auto pr-2"></div>
-      <button id="fechar-modal" class="mt-6 w-full bg-gray-800 text-white py-3 rounded-lg font-semibold hover:bg-gray-900 transition">Entendido</button>
+      <button id="fechar-modal" class="mt-6 w-full bg-gray-800 text-white py-3 rounded-lg font-semibold hover:bg-gray-900 transition shadow-md">Entendido</button>
     </div>
   </div>
 
-  <script src="config.js"></script>
+  <script src="supabase-config.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
