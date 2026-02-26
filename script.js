@@ -3,7 +3,7 @@ const _supabase = supabase.createClient(SUPABASE_CONFIG.URL, SUPABASE_CONFIG.KEY
 
 async function carregarDadosDoSupabase() {
     try {
-        const { data: scripts, error: err1 } = await _supabase.from('scripts').select('*').order('created_at', { ascending: true });
+        const { data: scripts, error: err1 } = await _supabase.from('scripts').select('*').order('setor', { ascending: true }).order('codigo', { ascending: true });
         const { data: avisos, error: err2 } = await _supabase.from('avisos').select('*').order('created_at', { ascending: false });
 
         if (err1 || err2) throw (err1 || err2);
@@ -79,3 +79,4 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('fechar-modal').onclick = () => document.getElementById('modal-avisos').classList.add('hidden');
     document.getElementById('btn-enviar-sugestao').onclick = enviarSugestao;
 });
+
